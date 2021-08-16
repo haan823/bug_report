@@ -1,4 +1,5 @@
-# bug_report
+# :beetle: bug_report
+---
 
 contributor
 ---
