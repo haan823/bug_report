@@ -1,6 +1,5 @@
 # bug_report :honeybee:
 ---
-
 contributor
 ---
 - [SANGHYUN KIM](https://github.com/haan823)
