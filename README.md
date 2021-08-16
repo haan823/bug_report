@@ -1,5 +1,4 @@
-# bug_report
-:honeybee:
+# bug_report :honeybee:
 ---
 
 contributor
