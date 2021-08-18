@@ -13,25 +13,25 @@ public class Service {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long service_id;
+    private Long serviceId;
 
     @Column
-    private Long category_id;
+    private Long categoryId;
 
     @Column
-    private Long company_id;
+    private Long companyId;
 
     @Column
-    private String service_name;
+    private String serviceName;
 
     @Column
-    private String service_detail;
+    private String serviceDetail;
 
     @Builder
-    public Service(Long category_id, Long company_id, String service_name, String service_detail){
-        this.category_id = category_id;
-        this.company_id = company_id;
-        this.service_name = service_name;
-        this.service_detail = service_detail;
+    public Service(Long categoryId, Long companyId, String serviceName, String serviceDetail){
+        this.categoryId = categoryId;
+        this.companyId = companyId;
+        this.serviceName = serviceName;
+        this.serviceDetail = serviceDetail;
     }
 }

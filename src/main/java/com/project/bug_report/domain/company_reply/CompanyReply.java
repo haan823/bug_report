@@ -1,5 +1,6 @@
 package com.project.bug_report.domain.company_reply;
 
+import com.project.bug_report.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,25 +10,25 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class CompanyReply {
+public class CompanyReply extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reply_id;
+    private Long replyId;
 
     @Column
-    private Long company_id;
+    private Long companyId;
 
     @Column
-    private Long review_id;
+    private Long reviewId;
 
     @Column
     private String reply;
 
     @Builder
-    public CompanyReply(Long company_id, Long review_id, String reply){
-        this.company_id = company_id;
-        this.review_id = review_id;
+    public CompanyReply(Long companyId, Long reviewId, String reply){
+        this.companyId = companyId;
+        this.reviewId = reviewId;
         this.reply = reply;
     }
 }
