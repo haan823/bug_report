@@ -1,5 +1,6 @@
 package com.project.bug_report.domain.company;
 
+import com.project.bug_report.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,14 +10,14 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Company {
+public class Company extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long company_id;
+    private Long companyId;
 
     @Column
-    private String company_name;
+    private String companyName;
 
     @Column
     private String country;
@@ -25,13 +26,13 @@ public class Company {
     private String website;
 
     @Column
-    private String company_info;
+    private String companyInfo;
 
     @Builder
-    public Company(String company_name, String country, String website, String company_info){
-        this.company_name = company_name;
+    public Company(String companyName, String country, String website, String companyInfo){
+        this.companyName = companyName;
         this.country = country;
         this.website = website;
-        this.company_info = company_info;
+        this.companyInfo = companyInfo;
     }
 }

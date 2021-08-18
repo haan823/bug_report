@@ -13,13 +13,13 @@ public class ServiceCategory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long category_id;
+    private Long categoryId;
 
     @Column
-    private String category_name;
+    private String categoryName;
 
     @Builder
-    public ServiceCategory(String category_name){
-        this.category_name = category_name;
+    public ServiceCategory(String categoryName){
+        this.categoryName = categoryName;
     }
 }
