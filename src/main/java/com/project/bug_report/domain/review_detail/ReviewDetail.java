@@ -1,5 +1,6 @@
 package com.project.bug_report.domain.review_detail;
 
+import com.project.bug_report.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import java.util.Date;
 @Getter
 @NoArgsConstructor
 @Entity
-public class ReviewDetail {
+public class ReviewDetail extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long detailId;
@@ -20,13 +21,6 @@ public class ReviewDetail {
     private String filePath;
     private Boolean detailType;
     private Long order;
-    private Long modifiedBy;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDate;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
 
     @Builder
     public ReviewDetail(Long reviewId, String fileName, String filePath, Boolean detailType, Long order) {

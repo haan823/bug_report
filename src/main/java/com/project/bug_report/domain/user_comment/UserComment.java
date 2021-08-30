@@ -1,5 +1,6 @@
 package com.project.bug_report.domain.user_comment;
 
+import com.project.bug_report.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import java.util.Date;
 @Getter
 @NoArgsConstructor
 @Entity
-public class UserComment {
+public class UserComment extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long commentsId;
@@ -18,13 +19,6 @@ public class UserComment {
     private Long userId;
     private Long reviewId;
     private String comments;
-    private Long modifiedBy;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDate;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
 
     @Builder
     public UserComment(Long userId, Long reviewId, String comments) {
