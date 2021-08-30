@@ -1,0 +1,36 @@
+package com.project.bug_report.domain.company_reply;
+
+import com.project.bug_report.domain.BaseTimeEntity;
+import com.project.bug_report.domain.company.Company;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Getter
+@NoArgsConstructor
+@Entity
+public class CompanyReply extends BaseTimeEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long replyId;
+
+    @Column
+    @ManyToOne
+    private Company companyId;
+
+    @Column
+    private Long reviewId;
+
+    @Column
+    private String reply;
+
+    @Builder
+    public CompanyReply(Company companyId, Long reviewId, String reply){
+        this.companyId = companyId;
+        this.reviewId = reviewId;
+        this.reply = reply;
+    }
+}
