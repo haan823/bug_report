@@ -1,5 +1,6 @@
 package com.project.bug_report.domain.review;
 
+import com.project.bug_report.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import java.util.Date;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Review {
+public class Review extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,13 +23,6 @@ public class Review {
     private Long status;
     private Long ratings;
     private Boolean openToPublic;
-    private Long modifiedBy;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDate;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
 
     @Builder
     public Review(Long userId, Long serviceId, String textReview, Long status, Long ratings, Boolean openToPublic) {

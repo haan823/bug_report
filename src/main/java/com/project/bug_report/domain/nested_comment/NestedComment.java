@@ -1,5 +1,6 @@
 package com.project.bug_report.domain.nested_comment;
 
+import com.project.bug_report.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,8 @@ import java.util.Date;
 @Getter
 @NoArgsConstructor
 @Entity
-public class NestedComment {
+public class NestedComment extends BaseTimeEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long nestedCommentId;
@@ -18,13 +20,6 @@ public class NestedComment {
     private Long userId;
     private Long commentId;
     private String nestedComment;
-    private Long modifiedBy;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDate;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
 
     @Builder
     public NestedComment(Long userId, Long commentId, String nestedComment) {
