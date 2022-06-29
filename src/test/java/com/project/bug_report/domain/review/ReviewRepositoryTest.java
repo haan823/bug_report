@@ -1,5 +1,7 @@
 package com.project.bug_report.domain.review;
 
+import com.project.bug_report.model.review.Review;
+import com.project.bug_report.repository.review.ReviewRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;

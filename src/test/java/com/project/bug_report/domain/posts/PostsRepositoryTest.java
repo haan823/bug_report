@@ -1,5 +1,7 @@
 package com.project.bug_report.domain.posts;
 
+import com.project.bug_report.wait4rm.Posts;
+import com.project.bug_report.wait4rm.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
