@@ -2,12 +2,14 @@ package com.project.bug_report.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@RequestMapping(value = "/users")
 public class UserController {
 
     @GetMapping(value = "/users/join")
