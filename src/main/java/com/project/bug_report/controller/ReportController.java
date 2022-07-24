@@ -8,34 +8,34 @@ import org.springframework.web.bind.annotation.*;
 public class ReportController {
 
     @PostMapping(value = "/items")
-    public ResponseEntity reportBugByItems() { return null; }
+    public ResponseEntity<?> reportBugByItems() { return null; }
 
     @PostMapping(value = "/categories")
-    public ResponseEntity reportBugByCategories() {
+    public ResponseEntity<?> reportBugByCategories() {
         return null;
     }
 
     @PostMapping(value = "/discretion")
-    public ResponseEntity reportBugAtDiscretion() { return null; }
+    public ResponseEntity<?> reportBugAtDiscretion() { return null; }
 
     @GetMapping(value = "/public/all")
-    public ResponseEntity getAllReports() { return null; }
+    public ResponseEntity<?> getAllReports() { return null; }
 
     @GetMapping(value = "/public/categories")
-    public ResponseEntity getReportsByCategories() { return null; }
+    public ResponseEntity<?> getReportsByCategories() { return null; }
 
     @GetMapping(value = "/public/keywords")
-    public ResponseEntity getReportsByKeywords() { return null; }
+    public ResponseEntity<?> getReportsByKeywords() { return null; }
 
     @GetMapping(value = "/private/{user-id}")
-    public ResponseEntity getPrivateReportsByUserId() { return null; }
+    public ResponseEntity<?> getPrivateReportsByUserId() { return null; }
 
     @GetMapping(value = "/{report-id}")
-    public ResponseEntity getSingleReportById() { return null; }
+    public ResponseEntity<?> getSingleReportById() { return null; }
 
     @DeleteMapping(value = "/{report-id}")
-    public ResponseEntity removeSingleReportById() { return null; }
+    public ResponseEntity<?> removeSingleReportById() { return null; }
 
     @PutMapping(value = "/{report-id}")
-    public ResponseEntity editSingleReportById() { return null; }
+    public ResponseEntity<?> editSingleReportById() { return null; }
 }

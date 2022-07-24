@@ -1,6 +1,8 @@
 package com.project.bug_report.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,12 +13,13 @@ import java.util.Map;
 @RequestMapping(value = "/replies")
 public class ReplyController {
 
-    @GetMapping(value = "/product/reply")
-    public Map<String, Object> example1() {
-        HashMap<String, Object> sample = new HashMap<>();
+    @GetMapping(value = "/{report-id}")
+    public ResponseEntity<?> getRepliesByReportId() {
+        return null;
+    }
 
-        sample.put("sample1", "reply sample");
-
-        return sample;
+    @PostMapping(value = "/satisfaction")
+    public ResponseEntity<?> setSatisfactionLevel() {
+        return null;
     }
 }
