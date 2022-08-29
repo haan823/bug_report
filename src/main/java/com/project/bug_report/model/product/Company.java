@@ -1,16 +1,17 @@
 package com.project.bug_report.model.product;
 
 import com.project.bug_report.model.BaseTimeEntity;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Getter
+@Data
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table
 public class Company extends BaseTimeEntity implements Serializable {
 
     @Id
